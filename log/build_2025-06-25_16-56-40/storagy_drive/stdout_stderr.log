@@ -1,0 +1,48 @@
+running develop
+Removing /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy-drive.egg-link (link to .)
+running egg_info
+writing ../../build/storagy_drive/storagy_drive.egg-info/PKG-INFO
+writing dependency_links to ../../build/storagy_drive/storagy_drive.egg-info/dependency_links.txt
+writing entry points to ../../build/storagy_drive/storagy_drive.egg-info/entry_points.txt
+writing requirements to ../../build/storagy_drive/storagy_drive.egg-info/requires.txt
+writing top-level names to ../../build/storagy_drive/storagy_drive.egg-info/top_level.txt
+reading manifest file '../../build/storagy_drive/storagy_drive.egg-info/SOURCES.txt'
+writing manifest file '../../build/storagy_drive/storagy_drive.egg-info/SOURCES.txt'
+running build
+running build_py
+copying storagy_drive/image_example.py -> /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive
+running install
+running install_lib
+creating /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/drive_1.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/__init__.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/scan_example.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/tiny_yolov1net_squeezenet.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/cmd_test.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/image_example.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/cmd_vel_example.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/yolov1_utils.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/img_test.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/custom_transform.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/drive_1.py to drive_1.cpython-310.pyc
+byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/scan_example.py to scan_example.cpython-310.pyc
+byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/tiny_yolov1net_squeezenet.py to tiny_yolov1net_squeezenet.cpython-310.pyc
+byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/cmd_test.py to cmd_test.cpython-310.pyc
+byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/image_example.py to image_example.cpython-310.pyc
+byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/cmd_vel_example.py to cmd_vel_example.cpython-310.pyc
+byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/yolov1_utils.py to yolov1_utils.cpython-310.pyc
+byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/img_test.py to img_test.cpython-310.pyc
+byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/custom_transform.py to custom_transform.cpython-310.pyc
+running install_data
+copying resource/storagy_drive -> /home/storagy/ros2_ws/install/storagy_drive/share/ament_index/resource_index/packages
+copying package.xml -> /home/storagy/ros2_ws/install/storagy_drive/share/storagy_drive
+running install_egg_info
+Copying ../../build/storagy_drive/storagy_drive.egg-info to /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive-0.0.0-py3.10.egg-info
+running install_scripts
+Installing cmd_test script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+Installing cmd_vel_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+Installing image_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+Installing img_test script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+Installing scan_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+writing list of installed files to '/home/storagy/ros2_ws/build/storagy_drive/install.log'

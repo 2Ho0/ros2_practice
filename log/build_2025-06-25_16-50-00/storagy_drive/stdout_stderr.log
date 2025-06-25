@@ -1,0 +1,21 @@
+running develop
+running egg_info
+writing storagy_drive.egg-info/PKG-INFO
+writing dependency_links to storagy_drive.egg-info/dependency_links.txt
+writing entry points to storagy_drive.egg-info/entry_points.txt
+writing requirements to storagy_drive.egg-info/requires.txt
+writing top-level names to storagy_drive.egg-info/top_level.txt
+reading manifest file 'storagy_drive.egg-info/SOURCES.txt'
+writing manifest file 'storagy_drive.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy-drive.egg-link (link to .)
+Installing cmd_test script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+Installing cmd_vel_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+Installing image_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+Installing img_test script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+Installing scan_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+
+Installed /home/storagy/ros2_ws/build/storagy_drive
+running symlink_data
+symbolically linking /home/storagy/ros2_ws/build/storagy_drive/resource/storagy_drive -> /home/storagy/ros2_ws/install/storagy_drive/share/ament_index/resource_index/packages
+symbolically linking /home/storagy/ros2_ws/build/storagy_drive/package.xml -> /home/storagy/ros2_ws/install/storagy_drive/share/storagy_drive

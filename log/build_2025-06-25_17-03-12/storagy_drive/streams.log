@@ -1,0 +1,29 @@
+[0.698s] Invoking command in '/home/storagy/ros2_ws/src/storagy_drive': PYTHONPATH=/home/storagy/ros2_ws/build/storagy_drive/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/storagy_drive build --build-base /home/storagy/ros2_ws/build/storagy_drive/build install --record /home/storagy/ros2_ws/build/storagy_drive/install.log --single-version-externally-managed install_data
+[0.960s] running egg_info
+[0.960s] writing ../../build/storagy_drive/storagy_drive.egg-info/PKG-INFO
+[0.960s] writing dependency_links to ../../build/storagy_drive/storagy_drive.egg-info/dependency_links.txt
+[0.960s] writing entry points to ../../build/storagy_drive/storagy_drive.egg-info/entry_points.txt
+[0.961s] writing requirements to ../../build/storagy_drive/storagy_drive.egg-info/requires.txt
+[0.961s] writing top-level names to ../../build/storagy_drive/storagy_drive.egg-info/top_level.txt
+[0.962s] reading manifest file '../../build/storagy_drive/storagy_drive.egg-info/SOURCES.txt'
+[0.963s] writing manifest file '../../build/storagy_drive/storagy_drive.egg-info/SOURCES.txt'
+[0.963s] running build
+[0.963s] running build_py
+[0.964s] copying storagy_drive/sunwoo.py -> /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive
+[0.964s] running install
+[0.964s] running install_lib
+[0.965s] copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/sunwoo.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[0.966s] byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/sunwoo.py to sunwoo.cpython-310.pyc
+[0.967s] running install_data
+[0.967s] running install_egg_info
+[0.968s] removing '/home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive-0.0.0-py3.10.egg-info' (and everything under it)
+[0.969s] Copying ../../build/storagy_drive/storagy_drive.egg-info to /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive-0.0.0-py3.10.egg-info
+[0.969s] running install_scripts
+[0.989s] Installing cmd_test script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+[0.989s] Installing cmd_vel_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+[0.989s] Installing image_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+[0.989s] Installing img_test script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+[0.989s] Installing scan_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+[0.989s] Installing sunwoo script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+[0.989s] writing list of installed files to '/home/storagy/ros2_ws/build/storagy_drive/install.log'
+[1.011s] Invoked command in '/home/storagy/ros2_ws/src/storagy_drive' returned '0': PYTHONPATH=/home/storagy/ros2_ws/build/storagy_drive/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/storagy_drive build --build-base /home/storagy/ros2_ws/build/storagy_drive/build install --record /home/storagy/ros2_ws/build/storagy_drive/install.log --single-version-externally-managed install_data

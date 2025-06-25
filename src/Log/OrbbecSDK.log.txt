@@ -1,0 +1,149 @@
+[06/25 16:40:36.235433][debug][13315][Context.cpp:31] Context creating. work_dir=/home/storagy/ros2_ws/src
+[06/25 16:40:36.235483][debug][13315][Context.cpp:50] Config file version=1.1
+[06/25 16:40:36.235503][debug][13315][FrameBufferManager.cpp:23] Max global frame buffer size updated! size=2048.000MB
+[06/25 16:40:36.235511][info][13315][Context.cpp:69] Context created with config: /home/storagy/Desktop/storagy_ws/install/orbbec_camera/share/orbbec_camera/config/OrbbecSDKConfig_v1.0.xml
+[06/25 16:40:36.235526][info][13315][Context.cpp:74] Context work_dir=/home/storagy/ros2_ws/src
+[06/25 16:40:36.235530][info][13315][Context.cpp:77] 	- SDK version: 1.9.4
+[06/25 16:40:36.235533][info][13315][Context.cpp:78] 	- SDK stage version: main
+[06/25 16:40:36.235538][info][13315][Context.cpp:82] get config EnumerateNetDevice:false
+[06/25 16:40:36.235542][debug][13315][DeviceManager.cpp:30] DeviceManager init ...
+[06/25 16:40:36.235544][info][13315][LinuxPal.cpp:38] createObPal: create LinuxPal!
+[06/25 16:40:36.236117][debug][13315][DeviceManager.cpp:34] Enable USB Device Enumerator ...
+[06/25 16:40:36.313061][debug][13315][EnumeratorLibusb.cpp:323] queryDevicesInfo done!
+[06/25 16:40:36.313172][debug][13315][UsbDeviceEnumerator.cpp:161] Current usb device port list:
+[06/25 16:40:36.313180][debug][13315][UsbDeviceEnumerator.cpp:164]  - 1-1.2-6.0 | Orbbec(R) Astra(TM) 3D Camera(F) Depth
+[06/25 16:40:36.313183][debug][13315][UsbDeviceEnumerator.cpp:164]  - 1-1.1-4.0 | USB Camera
+[06/25 16:40:36.313205][warning][13315][OpenNIDeviceInfo.cpp:186] New openni device matched.
+[06/25 16:40:36.313358][info][13315][LinuxPal.cpp:112] Create PollingDeviceWatcher!
+[06/25 16:40:36.313380][debug][13315][UsbDeviceEnumerator.cpp:69] Found 1 device(s):
+[06/25 16:40:36.313386][debug][13315][UsbDeviceEnumerator.cpp:72]   - Name: SV1301S_U3, PID: 0x0614, SN/ID: , connection: USB2.0
+[06/25 16:40:36.313403][info][13315][DeviceManager.cpp:15] Current found device(s): (1)
+[06/25 16:40:36.313408][info][13315][DeviceManager.cpp:24] 	- Name: SV1301S_U3, PID: 0x0614, SN/ID: , Connection: USB2.0
+[06/25 16:40:36.313411][debug][13315][DeviceManager.cpp:55] DeviceManager construct done!
+[06/25 16:40:36.314117][info][13315][DeviceManager.cpp:310] Enable net device enumeration: false
+[06/25 16:40:36.319458][info][13488][OpenNIHostProtocol.cpp:567] Hardware versions: FW=5.8.23 (14), HW=0, Chip=7, Sensor=0, SYS=12
+[06/25 16:40:36.319739][error][13488][OpenNIHostProtocol.cpp:584] Get usb core type failed!
+[06/25 16:40:36.322005][info][13488][OpenNISensorFirmware.cpp:1185] Sensor serial number:AY2MC3101PE
+[06/25 16:40:36.322483][info][13488][OpenNISensorFirmware.cpp:1213] Firmware version RD3013
+[06/25 16:40:36.322713][info][13488][OpenNISensorFirmware.cpp:1219] Device frequency 50
+[06/25 16:40:36.401852][error][13488][OpenNIHostProtocol.cpp:957] Host Protocol sub cmd not supported!
+[06/25 16:40:36.401887][warning][13488][OpenNISensorFirmware.cpp:153] OpenNI2 camera don't support Watchdog function!
+[06/25 16:40:36.401934][info][13488][AbstractDevice.cpp:124] 	- Firmware version: RD3013
+[06/25 16:40:36.402006][info][13488][OpenNIDevice.cpp:33] OpenNI device created! PID: 0x0614, SN: AY2MC3101PE
+[06/25 16:40:36.402015][info][13488][DeviceManager.cpp:157] Device created successfully! Name: SV1301S_U3, PID: 0x0614, SN/ID: 
+[06/25 16:40:36.413620][info][13488][OpenNIDevice.cpp:692] IR sensor has been created!
+[06/25 16:40:36.434523][info][13488][OpenNIDevice.cpp:645] Color sensor has been created!
+[06/25 16:40:36.434848][info][13488][OpenNIDevice.cpp:566] Depth sensor has been created!
+[06/25 16:40:36.534153][info][13488][Pipeline.cpp:44] Pipeline created with device: {name: SV1301S_U3, sn: AY2MC3101PE}, @0x7F27882B9750
+[06/25 16:40:36.535412][info][13488][Pipeline.cpp:239] Try to start streams!
+[06/25 16:40:36.552465][info][13488][VideoSensor.cpp:662] start OB_SENSOR_COLOR stream with profile: {type: OB_STREAM_COLOR, format: OB_FORMAT_MJPG, width: 640, height: 480, fps: 30}
+[06/25 16:40:37.011596][info][13488][Pipeline.cpp:252] Start streams done!
+[06/25 16:40:37.011965][info][13488][Pipeline.cpp:235] Pipeline start done!
+[06/25 16:55:14.967841][info][13315][DeviceManager.cpp:310] Enable net device enumeration: false
+[06/25 16:55:16.083809][info][16370][Pipeline.cpp:44] Pipeline created with device: {name: SV1301S_U3, sn: AY2MC3101PE}, @0x7F273C41B840
+[06/25 16:55:16.095324][info][16370][Pipeline.cpp:239] Try to start streams!
+[06/25 16:55:16.096536][warning][16370][Pipeline.cpp:233] Execute failure! A std::exception has occurred!
+	 - where:233#start
+	 - msg:Firmware stream Depth processor claimed failed!
+	 - type:St13runtime_error
+[06/25 16:55:16.096577][info][16370][Pipeline.cpp:362] Try to stop pipeline!
+[06/25 16:55:16.096583][info][16370][Pipeline.cpp:334] Try to stop streams!
+[06/25 16:55:16.167425][info][16370][VideoSensor.cpp:771] Video sensor stopped, @OB_SENSOR_COLOR
+[06/25 16:55:16.167622][info][16370][Pipeline.cpp:347] Sensor stream stopped, sensorType=OB_SENSOR_COLOR
+[06/25 16:55:16.275611][warning][13530][OpenNIUSBLinux.cpp:244] Endpoint  0x82, Buffer4: Failed waiting on asynch transfer event:OB_EVENT_TIMEOUT
+[06/25 16:55:16.377106][warning][13530][OpenNIUSBLinux.cpp:244] Endpoint  0x82, Buffer0: Failed waiting on asynch transfer event:OB_EVENT_TIMEOUT
+[06/25 16:55:16.377270][warning][13530][OpenNIUSBLinux.cpp:203] exist(0) read thread(1)
+[06/25 16:55:16.377462][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377486][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377492][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377498][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377502][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377507][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377511][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377516][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377520][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377525][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377529][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377533][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377538][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377543][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377547][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.377551][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Invalid argument, number:22 
+[06/25 16:55:16.381217][error][16370][OpenNIVideoSensor.cpp:715] OpenNI IR  stream stop failed!
+[06/25 16:55:16.381599][error][16370][OpenNIVideoSensor.cpp:731] OpenNI IR stream stop completed.
+[06/25 16:55:16.381620][info][16370][Pipeline.cpp:347] Sensor stream stopped, sensorType=OB_SENSOR_IR
+[06/25 16:55:16.494641][warning][13526][OpenNIUSBLinux.cpp:244] Endpoint  0x81, Buffer3: Failed waiting on asynch transfer event:OB_EVENT_TIMEOUT
+[06/25 16:55:16.595096][warning][13526][OpenNIUSBLinux.cpp:244] Endpoint  0x81, Buffer1: Failed waiting on asynch transfer event:OB_EVENT_TIMEOUT
+[06/25 16:55:16.595281][warning][13526][OpenNIUSBLinux.cpp:203] exist(0) read thread(2)
+[06/25 16:55:16.596396][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596489][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596499][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596505][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596512][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596518][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596524][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596528][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596534][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596540][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596545][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596550][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596555][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596559][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596564][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.596568][warning][16370][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Invalid argument, number:22 
+[06/25 16:55:16.597882][error][16370][OpenNIVideoSensor.cpp:715] OpenNI Depth  stream stop failed!
+[06/25 16:55:16.600510][error][16370][OpenNIVideoSensor.cpp:731] OpenNI Depth stream stop completed.
+[06/25 16:55:16.600556][info][16370][Pipeline.cpp:347] Sensor stream stopped, sensorType=OB_SENSOR_DEPTH
+[06/25 16:55:16.600561][info][16370][Pipeline.cpp:353] Stop streams done!
+[06/25 16:55:16.603272][info][16370][Pipeline.cpp:391] Stop pipeline done!
+[06/25 16:55:16.604231][info][16370][Pipeline.cpp:239] Try to start streams!
+[06/25 16:55:16.621717][info][16370][VideoSensor.cpp:662] start OB_SENSOR_COLOR stream with profile: {type: OB_STREAM_COLOR, format: OB_FORMAT_MJPG, width: 640, height: 480, fps: 30}
+[06/25 16:55:17.079279][info][16370][Pipeline.cpp:252] Start streams done!
+[06/25 16:55:17.079411][info][16370][Pipeline.cpp:235] Pipeline start done!
+[06/25 17:07:09.988959][info][13315][Pipeline.cpp:362] Try to stop pipeline!
+[06/25 17:07:09.989078][info][13315][Pipeline.cpp:334] Try to stop streams!
+[06/25 17:07:10.061896][info][13315][VideoSensor.cpp:771] Video sensor stopped, @OB_SENSOR_COLOR
+[06/25 17:07:10.061994][info][13315][Pipeline.cpp:347] Sensor stream stopped, sensorType=OB_SENSOR_COLOR
+[06/25 17:07:10.162424][warning][16384][OpenNIUSBLinux.cpp:244] Endpoint  0x81, Buffer13: Failed waiting on asynch transfer event:OB_EVENT_TIMEOUT
+[06/25 17:07:10.262880][warning][16384][OpenNIUSBLinux.cpp:244] Endpoint  0x81, Buffer11: Failed waiting on asynch transfer event:OB_EVENT_TIMEOUT
+[06/25 17:07:10.263081][warning][16384][OpenNIUSBLinux.cpp:203] exist(0) read thread(12)
+[06/25 17:07:10.263295][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263402][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263423][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263442][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263460][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263477][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263495][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263513][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263529][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263546][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263564][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263581][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263598][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263615][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263632][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.263649][warning][13315][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:07:10.264864][error][13315][OpenNIVideoSensor.cpp:715] OpenNI Depth  stream stop failed!
+[06/25 17:07:10.268177][error][13315][OpenNIVideoSensor.cpp:731] OpenNI Depth stream stop completed.
+[06/25 17:07:10.268247][info][13315][Pipeline.cpp:347] Sensor stream stopped, sensorType=OB_SENSOR_DEPTH
+[06/25 17:07:10.268267][info][13315][Pipeline.cpp:353] Stop streams done!
+[06/25 17:07:10.269023][info][13315][Pipeline.cpp:391] Stop pipeline done!
+[06/25 17:07:10.512893][info][13315][Pipeline.cpp:72] Pipeline destroyed! @0x7F273C41B840
+[06/25 17:07:11.360193][info][13315][Pipeline.cpp:362] Try to stop pipeline!
+[06/25 17:07:11.360271][info][13315][Pipeline.cpp:334] Try to stop streams!
+[06/25 17:07:11.360302][warning][13315][VideoSensor.cpp:721] Sensor(OB_SENSOR_COLOR) already stop.
+[06/25 17:07:11.360347][info][13315][Pipeline.cpp:347] Sensor stream stopped, sensorType=OB_SENSOR_COLOR
+[06/25 17:07:11.360364][warning][13315][OpenNIVideoSensor.cpp:696] Sensor(OB_SENSOR_IR) already stop.
+[06/25 17:07:11.360376][info][13315][Pipeline.cpp:347] Sensor stream stopped, sensorType=OB_SENSOR_IR
+[06/25 17:07:11.360389][warning][13315][OpenNIVideoSensor.cpp:696] Sensor(OB_SENSOR_DEPTH) already stop.
+[06/25 17:07:11.360400][info][13315][Pipeline.cpp:347] Sensor stream stopped, sensorType=OB_SENSOR_DEPTH
+[06/25 17:07:11.360411][info][13315][Pipeline.cpp:353] Stop streams done!
+[06/25 17:07:11.361145][info][13315][Pipeline.cpp:391] Stop pipeline done!
+[06/25 17:07:11.563782][info][13315][Pipeline.cpp:72] Pipeline destroyed! @0x7F27882B9750
+[06/25 17:07:11.564088][info][13315][OpenNIDevice.cpp:37] OpenNI device destroyed! PID: 0x0614, SN: AY2MC3101PE
+[06/25 17:07:11.564100][info][13315][OpenNIVideoSensor.cpp:1070] OpenNIVideoSensor destroyed! sensorType=OB_SENSOR_IR
+[06/25 17:07:11.564107][info][13315][VideoSensor.cpp:335] VideoSensor destroyed, @OB_SENSOR_COLOR
+[06/25 17:07:11.564118][info][13315][OpenNIVideoSensor.cpp:1070] OpenNIVideoSensor destroyed! sensorType=OB_SENSOR_DEPTH
+[06/25 17:07:11.564280][info][13315][ObUvcDevice.cpp:70] uvc_close done.
+[06/25 17:07:11.564288][info][13315][ObUvcDevice.cpp:72] ~ObUvcDevice done
+[06/25 17:07:11.565121][info][13315][Context.cpp:90] Context destroyed

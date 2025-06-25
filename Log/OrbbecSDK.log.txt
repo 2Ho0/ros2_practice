@@ -1,0 +1,181 @@
+[06/25 16:55:14.021213][debug][16155][Context.cpp:31] Context creating. work_dir=/home/storagy/ros2_ws
+[06/25 16:55:14.022377][debug][16155][Context.cpp:50] Config file version=1.1
+[06/25 16:55:14.023221][debug][16155][FrameBufferManager.cpp:23] Max global frame buffer size updated! size=2048.000MB
+[06/25 16:55:14.023249][info][16155][Context.cpp:69] Context created with config: /home/storagy/Desktop/storagy_ws/install/orbbec_camera/share/orbbec_camera/config/OrbbecSDKConfig_v1.0.xml
+[06/25 16:55:14.023278][info][16155][Context.cpp:74] Context work_dir=/home/storagy/ros2_ws
+[06/25 16:55:14.023289][info][16155][Context.cpp:77] 	- SDK version: 1.9.4
+[06/25 16:55:14.023293][info][16155][Context.cpp:78] 	- SDK stage version: main
+[06/25 16:55:14.023299][info][16155][Context.cpp:82] get config EnumerateNetDevice:false
+[06/25 16:55:14.023305][debug][16155][DeviceManager.cpp:30] DeviceManager init ...
+[06/25 16:55:14.023307][info][16155][LinuxPal.cpp:38] createObPal: create LinuxPal!
+[06/25 16:55:14.026572][debug][16155][DeviceManager.cpp:34] Enable USB Device Enumerator ...
+[06/25 16:55:14.132460][debug][16155][EnumeratorLibusb.cpp:323] queryDevicesInfo done!
+[06/25 16:55:14.132543][debug][16155][UsbDeviceEnumerator.cpp:161] Current usb device port list:
+[06/25 16:55:14.132549][debug][16155][UsbDeviceEnumerator.cpp:164]  - 1-1.2-6.0 | Orbbec(R) Astra(TM) 3D Camera(F) Depth
+[06/25 16:55:14.132551][debug][16155][UsbDeviceEnumerator.cpp:164]  - 1-1.1-4.0 | USB Camera
+[06/25 16:55:14.132584][warning][16155][OpenNIDeviceInfo.cpp:186] New openni device matched.
+[06/25 16:55:14.132672][info][16155][LinuxPal.cpp:112] Create PollingDeviceWatcher!
+[06/25 16:55:14.132682][debug][16155][UsbDeviceEnumerator.cpp:69] Found 1 device(s):
+[06/25 16:55:14.132686][debug][16155][UsbDeviceEnumerator.cpp:72]   - Name: SV1301S_U3, PID: 0x0614, SN/ID: , connection: USB2.0
+[06/25 16:55:14.132735][info][16155][DeviceManager.cpp:15] Current found device(s): (1)
+[06/25 16:55:14.132740][info][16155][DeviceManager.cpp:24] 	- Name: SV1301S_U3, PID: 0x0614, SN/ID: , Connection: USB2.0
+[06/25 16:55:14.132743][debug][16155][DeviceManager.cpp:55] DeviceManager construct done!
+[06/25 16:55:14.159356][info][16155][DeviceManager.cpp:310] Enable net device enumeration: false
+[06/25 16:55:14.167733][error][16352][HandleLibusb.hpp:89] failed to claim usb interface: 0, error: OB_USB_STATUS_BUSY
+[06/25 16:55:14.178075][info][16352][OpenNIHostProtocol.cpp:567] Hardware versions: FW=5.8.23 (14), HW=0, Chip=7, Sensor=0, SYS=12
+[06/25 16:55:14.180982][error][16352][OpenNIHostProtocol.cpp:584] Get usb core type failed!
+[06/25 16:55:14.194439][info][16352][OpenNISensorFirmware.cpp:1185] Sensor serial number:AY2MC3101PE
+[06/25 16:55:14.197823][info][16352][OpenNISensorFirmware.cpp:1213] Firmware version RD3013
+[06/25 16:55:14.198318][info][16352][OpenNISensorFirmware.cpp:1219] Device frequency 50
+[06/25 16:55:14.398010][error][16352][OpenNIHostProtocol.cpp:957] Host Protocol sub cmd not supported!
+[06/25 16:55:14.398045][warning][16352][OpenNISensorFirmware.cpp:153] OpenNI2 camera don't support Watchdog function!
+[06/25 16:55:14.398120][info][16352][AbstractDevice.cpp:124] 	- Firmware version: RD3013
+[06/25 16:55:14.398197][info][16352][OpenNIDevice.cpp:33] OpenNI device created! PID: 0x0614, SN: AY2MC3101PE
+[06/25 16:55:14.398206][info][16352][DeviceManager.cpp:157] Device created successfully! Name: SV1301S_U3, PID: 0x0614, SN/ID: 
+[06/25 16:55:14.740536][info][16352][OpenNIDevice.cpp:692] IR sensor has been created!
+[06/25 16:55:14.823327][warning][16352][ObUvcDevice.cpp:50] uvc_open  path=1-1.1-4.0 already opened
+[06/25 16:55:14.823379][warning][16352][ObUvcDevice.cpp:53] uvc_open  path=1-1.1-4.0 failed,return res:$-6
+[06/25 16:55:14.838524][info][16354][OpenNIDevice.cpp:37] OpenNI device destroyed! PID: 0x0614, SN: AY2MC3101PE
+[06/25 16:55:14.838568][info][16354][OpenNIVideoSensor.cpp:1070] OpenNIVideoSensor destroyed! sensorType=OB_SENSOR_IR
+[06/25 16:59:44.174301][info][16155][Context.cpp:90] Context destroyed
+[06/25 17:08:23.567259][debug][18734][Context.cpp:31] Context creating. work_dir=/home/storagy/ros2_ws
+[06/25 17:08:23.567298][debug][18734][Context.cpp:50] Config file version=1.1
+[06/25 17:08:23.567317][debug][18734][FrameBufferManager.cpp:23] Max global frame buffer size updated! size=2048.000MB
+[06/25 17:08:23.567323][info][18734][Context.cpp:69] Context created with config: /home/storagy/Desktop/storagy_ws/install/orbbec_camera/share/orbbec_camera/config/OrbbecSDKConfig_v1.0.xml
+[06/25 17:08:23.567336][info][18734][Context.cpp:74] Context work_dir=/home/storagy/ros2_ws
+[06/25 17:08:23.567339][info][18734][Context.cpp:77] 	- SDK version: 1.9.4
+[06/25 17:08:23.567342][info][18734][Context.cpp:78] 	- SDK stage version: main
+[06/25 17:08:23.567346][info][18734][Context.cpp:82] get config EnumerateNetDevice:false
+[06/25 17:08:23.567349][debug][18734][DeviceManager.cpp:30] DeviceManager init ...
+[06/25 17:08:23.567351][info][18734][LinuxPal.cpp:38] createObPal: create LinuxPal!
+[06/25 17:08:23.567872][debug][18734][DeviceManager.cpp:34] Enable USB Device Enumerator ...
+[06/25 17:08:23.644070][debug][18734][EnumeratorLibusb.cpp:323] queryDevicesInfo done!
+[06/25 17:08:23.644126][debug][18734][UsbDeviceEnumerator.cpp:161] Current usb device port list:
+[06/25 17:08:23.644131][debug][18734][UsbDeviceEnumerator.cpp:164]  - 1-1.2-6.0 | Orbbec(R) Astra(TM) 3D Camera(F) Depth
+[06/25 17:08:23.644133][debug][18734][UsbDeviceEnumerator.cpp:164]  - 1-1.1-4.0 | USB Camera
+[06/25 17:08:23.644148][warning][18734][OpenNIDeviceInfo.cpp:186] New openni device matched.
+[06/25 17:08:23.644238][info][18734][LinuxPal.cpp:112] Create PollingDeviceWatcher!
+[06/25 17:08:23.644245][debug][18734][UsbDeviceEnumerator.cpp:69] Found 1 device(s):
+[06/25 17:08:23.644248][debug][18734][UsbDeviceEnumerator.cpp:72]   - Name: SV1301S_U3, PID: 0x0614, SN/ID: , connection: USB2.0
+[06/25 17:08:23.644258][info][18734][DeviceManager.cpp:15] Current found device(s): (1)
+[06/25 17:08:23.644262][info][18734][DeviceManager.cpp:24] 	- Name: SV1301S_U3, PID: 0x0614, SN/ID: , Connection: USB2.0
+[06/25 17:08:23.644264][debug][18734][DeviceManager.cpp:55] DeviceManager construct done!
+[06/25 17:08:23.648055][info][18734][DeviceManager.cpp:310] Enable net device enumeration: false
+[06/25 17:08:23.652605][info][18869][OpenNIHostProtocol.cpp:567] Hardware versions: FW=5.8.23 (14), HW=0, Chip=7, Sensor=0, SYS=12
+[06/25 17:08:23.653349][error][18869][OpenNIHostProtocol.cpp:584] Get usb core type failed!
+[06/25 17:08:23.656922][info][18869][OpenNISensorFirmware.cpp:1185] Sensor serial number:AY2MC3101PE
+[06/25 17:08:23.657409][info][18869][OpenNISensorFirmware.cpp:1213] Firmware version RD3013
+[06/25 17:08:23.657671][info][18869][OpenNISensorFirmware.cpp:1219] Device frequency 50
+[06/25 17:08:23.714881][error][18869][OpenNIHostProtocol.cpp:957] Host Protocol sub cmd not supported!
+[06/25 17:08:23.714904][warning][18869][OpenNISensorFirmware.cpp:153] OpenNI2 camera don't support Watchdog function!
+[06/25 17:08:23.715159][info][18869][AbstractDevice.cpp:124] 	- Firmware version: RD3013
+[06/25 17:08:23.716094][info][18869][OpenNIDevice.cpp:33] OpenNI device created! PID: 0x0614, SN: AY2MC3101PE
+[06/25 17:08:23.716109][info][18869][DeviceManager.cpp:157] Device created successfully! Name: SV1301S_U3, PID: 0x0614, SN/ID: 
+[06/25 17:08:23.758083][info][18869][OpenNIDevice.cpp:692] IR sensor has been created!
+[06/25 17:08:23.778402][info][18869][OpenNIDevice.cpp:645] Color sensor has been created!
+[06/25 17:08:23.778617][info][18869][OpenNIDevice.cpp:566] Depth sensor has been created!
+[06/25 17:08:23.916438][info][18869][Pipeline.cpp:44] Pipeline created with device: {name: SV1301S_U3, sn: AY2MC3101PE}, @0x7930C02E0200
+[06/25 17:08:23.917545][info][18869][Pipeline.cpp:239] Try to start streams!
+[06/25 17:08:23.939548][info][18869][VideoSensor.cpp:662] start OB_SENSOR_COLOR stream with profile: {type: OB_STREAM_COLOR, format: OB_FORMAT_MJPG, width: 640, height: 480, fps: 30}
+[06/25 17:08:24.399433][info][18869][Pipeline.cpp:252] Start streams done!
+[06/25 17:08:24.399520][info][18869][Pipeline.cpp:235] Pipeline start done!
+[06/25 17:15:33.659659][info][18734][Pipeline.cpp:362] Try to stop pipeline!
+[06/25 17:15:33.659761][info][18734][Pipeline.cpp:334] Try to stop streams!
+[06/25 17:15:33.714650][info][18734][VideoSensor.cpp:771] Video sensor stopped, @OB_SENSOR_COLOR
+[06/25 17:15:33.714672][info][18734][Pipeline.cpp:347] Sensor stream stopped, sensorType=OB_SENSOR_COLOR
+[06/25 17:15:33.816883][warning][18905][OpenNIUSBLinux.cpp:244] Endpoint  0x82, Buffer0: Failed waiting on asynch transfer event:OB_EVENT_TIMEOUT
+[06/25 17:15:33.917422][warning][18905][OpenNIUSBLinux.cpp:244] Endpoint  0x82, Buffer12: Failed waiting on asynch transfer event:OB_EVENT_TIMEOUT
+[06/25 17:15:33.917566][error][18905][OpenNIPacketProcessor.cpp:18] Write buffer overflow!
+[06/25 17:15:33.917587][warning][18905][OpenNIUSBLinux.cpp:203] exist(0) read thread(13)
+[06/25 17:15:33.917808][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.917854][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.917871][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.917886][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.917901][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.917916][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.917931][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.917945][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.917960][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.917975][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.917990][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.918004][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.918019][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.918034][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.918049][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.918064][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:130, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:33.919999][error][18734][OpenNIVideoSensor.cpp:715] OpenNI IR  stream stop failed!
+[06/25 17:15:33.921496][error][18734][OpenNIVideoSensor.cpp:731] OpenNI IR stream stop completed.
+[06/25 17:15:33.921578][info][18734][Pipeline.cpp:347] Sensor stream stopped, sensorType=OB_SENSOR_IR
+[06/25 17:15:34.033956][warning][18904][OpenNIUSBLinux.cpp:244] Endpoint  0x81, Buffer12: Failed waiting on asynch transfer event:OB_EVENT_TIMEOUT
+[06/25 17:15:34.134293][warning][18904][OpenNIUSBLinux.cpp:244] Endpoint  0x81, Buffer10: Failed waiting on asynch transfer event:OB_EVENT_TIMEOUT
+[06/25 17:15:34.134496][warning][18904][OpenNIUSBLinux.cpp:203] exist(0) read thread(11)
+[06/25 17:15:34.134716][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134785][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134805][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134822][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134839][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134856][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134872][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134888][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134903][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134919][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134935][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134951][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134967][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134983][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.134998][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.135013][warning][18734][MessengerLibusb.cpp:82] usb_request_cancel returned error, endpoint:129, error:Inappropriate ioctl for device, number:25 
+[06/25 17:15:34.136331][error][18734][OpenNIVideoSensor.cpp:715] OpenNI Depth  stream stop failed!
+[06/25 17:15:34.139062][error][18734][OpenNIVideoSensor.cpp:731] OpenNI Depth stream stop completed.
+[06/25 17:15:34.139141][info][18734][Pipeline.cpp:347] Sensor stream stopped, sensorType=OB_SENSOR_DEPTH
+[06/25 17:15:34.139158][info][18734][Pipeline.cpp:353] Stop streams done!
+[06/25 17:15:34.139938][info][18734][Pipeline.cpp:391] Stop pipeline done!
+[06/25 17:15:34.385711][info][18734][Pipeline.cpp:72] Pipeline destroyed! @0x7930C02E0200
+[06/25 17:15:34.386030][info][18734][OpenNIDevice.cpp:37] OpenNI device destroyed! PID: 0x0614, SN: AY2MC3101PE
+[06/25 17:15:34.386041][info][18734][OpenNIVideoSensor.cpp:1070] OpenNIVideoSensor destroyed! sensorType=OB_SENSOR_IR
+[06/25 17:15:34.386047][info][18734][VideoSensor.cpp:335] VideoSensor destroyed, @OB_SENSOR_COLOR
+[06/25 17:15:34.386052][info][18734][OpenNIVideoSensor.cpp:1070] OpenNIVideoSensor destroyed! sensorType=OB_SENSOR_DEPTH
+[06/25 17:15:34.386235][info][18734][ObUvcDevice.cpp:70] uvc_close done.
+[06/25 17:15:34.386241][info][18734][ObUvcDevice.cpp:72] ~ObUvcDevice done
+[06/25 17:15:34.395149][info][18734][Context.cpp:90] Context destroyed
+[06/25 17:17:33.892066][debug][20277][Context.cpp:31] Context creating. work_dir=/home/storagy/ros2_ws
+[06/25 17:17:33.892100][debug][20277][Context.cpp:50] Config file version=1.1
+[06/25 17:17:33.892115][debug][20277][FrameBufferManager.cpp:23] Max global frame buffer size updated! size=2048.000MB
+[06/25 17:17:33.892120][info][20277][Context.cpp:69] Context created with config: /home/storagy/Desktop/storagy_ws/install/orbbec_camera/share/orbbec_camera/config/OrbbecSDKConfig_v1.0.xml
+[06/25 17:17:33.892140][info][20277][Context.cpp:74] Context work_dir=/home/storagy/ros2_ws
+[06/25 17:17:33.892143][info][20277][Context.cpp:77] 	- SDK version: 1.9.4
+[06/25 17:17:33.892146][info][20277][Context.cpp:78] 	- SDK stage version: main
+[06/25 17:17:33.892150][info][20277][Context.cpp:82] get config EnumerateNetDevice:false
+[06/25 17:17:33.892153][debug][20277][DeviceManager.cpp:30] DeviceManager init ...
+[06/25 17:17:33.892155][info][20277][LinuxPal.cpp:38] createObPal: create LinuxPal!
+[06/25 17:17:33.892648][debug][20277][DeviceManager.cpp:34] Enable USB Device Enumerator ...
+[06/25 17:17:33.970952][debug][20277][EnumeratorLibusb.cpp:323] queryDevicesInfo done!
+[06/25 17:17:33.970993][debug][20277][UsbDeviceEnumerator.cpp:161] Current usb device port list:
+[06/25 17:17:33.970997][debug][20277][UsbDeviceEnumerator.cpp:164]  - 1-1.2-6.0 | Orbbec(R) Astra(TM) 3D Camera(F) Depth
+[06/25 17:17:33.970998][debug][20277][UsbDeviceEnumerator.cpp:164]  - 1-1.1-4.0 | USB Camera
+[06/25 17:17:33.971007][warning][20277][OpenNIDeviceInfo.cpp:186] New openni device matched.
+[06/25 17:17:33.971084][info][20277][LinuxPal.cpp:112] Create PollingDeviceWatcher!
+[06/25 17:17:33.971105][debug][20277][UsbDeviceEnumerator.cpp:69] Found 1 device(s):
+[06/25 17:17:33.971108][debug][20277][UsbDeviceEnumerator.cpp:72]   - Name: SV1301S_U3, PID: 0x0614, SN/ID: , connection: USB2.0
+[06/25 17:17:33.971119][info][20277][DeviceManager.cpp:15] Current found device(s): (1)
+[06/25 17:17:33.971122][info][20277][DeviceManager.cpp:24] 	- Name: SV1301S_U3, PID: 0x0614, SN/ID: , Connection: USB2.0
+[06/25 17:17:33.971125][debug][20277][DeviceManager.cpp:55] DeviceManager construct done!
+[06/25 17:17:33.972148][info][20277][DeviceManager.cpp:310] Enable net device enumeration: false
+[06/25 17:17:33.973141][info][20409][OpenNIHostProtocol.cpp:567] Hardware versions: FW=5.8.23 (14), HW=0, Chip=7, Sensor=0, SYS=12
+[06/25 17:17:33.973392][error][20409][OpenNIHostProtocol.cpp:584] Get usb core type failed!
+[06/25 17:17:33.975958][info][20409][OpenNISensorFirmware.cpp:1185] Sensor serial number:AY2MC3101PE
+[06/25 17:17:33.976604][info][20409][OpenNISensorFirmware.cpp:1213] Firmware version RD3013
+[06/25 17:17:33.977068][info][20409][OpenNISensorFirmware.cpp:1219] Device frequency 50
+[06/25 17:17:34.015123][error][20409][OpenNIHostProtocol.cpp:957] Host Protocol sub cmd not supported!
+[06/25 17:17:34.015660][warning][20409][OpenNISensorFirmware.cpp:153] OpenNI2 camera don't support Watchdog function!
+[06/25 17:17:34.015718][info][20409][AbstractDevice.cpp:124] 	- Firmware version: RD3013
+[06/25 17:17:34.015789][info][20409][OpenNIDevice.cpp:33] OpenNI device created! PID: 0x0614, SN: AY2MC3101PE
+[06/25 17:17:34.015796][info][20409][DeviceManager.cpp:157] Device created successfully! Name: SV1301S_U3, PID: 0x0614, SN/ID: 
+[06/25 17:17:34.021694][info][20409][OpenNIDevice.cpp:692] IR sensor has been created!
+[06/25 17:17:34.041703][info][20409][OpenNIDevice.cpp:645] Color sensor has been created!
+[06/25 17:17:34.041959][info][20409][OpenNIDevice.cpp:566] Depth sensor has been created!
+[06/25 17:17:34.158376][info][20409][Pipeline.cpp:44] Pipeline created with device: {name: SV1301S_U3, sn: AY2MC3101PE}, @0x72268C2F3610
+[06/25 17:17:34.159114][info][20409][Pipeline.cpp:239] Try to start streams!
+[06/25 17:17:34.175778][info][20409][VideoSensor.cpp:662] start OB_SENSOR_COLOR stream with profile: {type: OB_STREAM_COLOR, format: OB_FORMAT_MJPG, width: 640, height: 480, fps: 30}
+[06/25 17:17:34.628501][info][20409][Pipeline.cpp:252] Start streams done!
+[06/25 17:17:34.628542][info][20409][Pipeline.cpp:235] Pipeline start done!

@@ -1,0 +1,56 @@
+[0.737s] Invoking command in '/home/storagy/ros2_ws/build/storagy_drive': PYTHONPATH=/home/storagy/ros2_ws/build/storagy_drive/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/storagy/ros2_ws/build/storagy_drive/build
+[1.024s] running develop
+[1.233s] Removing /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy-drive.egg-link (link to .)
+[1.262s] Invoked command in '/home/storagy/ros2_ws/build/storagy_drive' returned '0': PYTHONPATH=/home/storagy/ros2_ws/build/storagy_drive/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/storagy/ros2_ws/build/storagy_drive/build
+[1.264s] Invoking command in '/home/storagy/ros2_ws/src/storagy_drive': PYTHONPATH=/home/storagy/ros2_ws/build/storagy_drive/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/storagy_drive build --build-base /home/storagy/ros2_ws/build/storagy_drive/build install --record /home/storagy/ros2_ws/build/storagy_drive/install.log --single-version-externally-managed install_data --force
+[1.530s] running egg_info
+[1.531s] writing ../../build/storagy_drive/storagy_drive.egg-info/PKG-INFO
+[1.531s] writing dependency_links to ../../build/storagy_drive/storagy_drive.egg-info/dependency_links.txt
+[1.532s] writing entry points to ../../build/storagy_drive/storagy_drive.egg-info/entry_points.txt
+[1.532s] writing requirements to ../../build/storagy_drive/storagy_drive.egg-info/requires.txt
+[1.532s] writing top-level names to ../../build/storagy_drive/storagy_drive.egg-info/top_level.txt
+[1.534s] reading manifest file '../../build/storagy_drive/storagy_drive.egg-info/SOURCES.txt'
+[1.534s] writing manifest file '../../build/storagy_drive/storagy_drive.egg-info/SOURCES.txt'
+[1.535s] running build
+[1.535s] running build_py
+[1.535s] copying storagy_drive/tiny_yolov1net_squeezenet.py -> /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive
+[1.535s] copying storagy_drive/cmd_test.py -> /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive
+[1.535s] copying storagy_drive/yolov1_utils.py -> /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive
+[1.535s] copying storagy_drive/img_test.py -> /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive
+[1.536s] copying storagy_drive/custom_transform.py -> /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive
+[1.536s] running install
+[1.536s] running install_lib
+[1.537s] creating /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[1.537s] copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/drive_1.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[1.537s] copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/__init__.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[1.537s] copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/scan_example.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[1.537s] copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/tiny_yolov1net_squeezenet.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[1.537s] copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/cmd_test.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[1.537s] copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/image_example.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[1.538s] copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/cmd_vel_example.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[1.538s] copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/yolov1_utils.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[1.538s] copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/img_test.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[1.538s] copying /home/storagy/ros2_ws/build/storagy_drive/build/lib/storagy_drive/custom_transform.py -> /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive
+[1.538s] byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/drive_1.py to drive_1.cpython-310.pyc
+[1.539s] byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/__init__.py to __init__.cpython-310.pyc
+[1.540s] byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/scan_example.py to scan_example.cpython-310.pyc
+[1.540s] byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/tiny_yolov1net_squeezenet.py to tiny_yolov1net_squeezenet.cpython-310.pyc
+[1.541s] byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/cmd_test.py to cmd_test.cpython-310.pyc
+[1.541s] byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/image_example.py to image_example.cpython-310.pyc
+[1.541s] byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/cmd_vel_example.py to cmd_vel_example.cpython-310.pyc
+[1.542s] byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/yolov1_utils.py to yolov1_utils.cpython-310.pyc
+[1.544s] byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/img_test.py to img_test.cpython-310.pyc
+[1.545s] byte-compiling /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive/custom_transform.py to custom_transform.cpython-310.pyc
+[1.546s] running install_data
+[1.546s] copying resource/storagy_drive -> /home/storagy/ros2_ws/install/storagy_drive/share/ament_index/resource_index/packages
+[1.546s] copying package.xml -> /home/storagy/ros2_ws/install/storagy_drive/share/storagy_drive
+[1.546s] running install_egg_info
+[1.548s] Copying ../../build/storagy_drive/storagy_drive.egg-info to /home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages/storagy_drive-0.0.0-py3.10.egg-info
+[1.549s] running install_scripts
+[1.569s] Installing cmd_test script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+[1.569s] Installing cmd_vel_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+[1.569s] Installing image_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+[1.569s] Installing img_test script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+[1.569s] Installing scan_example script to /home/storagy/ros2_ws/install/storagy_drive/lib/storagy_drive
+[1.569s] writing list of installed files to '/home/storagy/ros2_ws/build/storagy_drive/install.log'
+[1.594s] Invoked command in '/home/storagy/ros2_ws/src/storagy_drive' returned '0': PYTHONPATH=/home/storagy/ros2_ws/build/storagy_drive/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/storagy/ros2_ws/install/storagy_drive/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/storagy_drive build --build-base /home/storagy/ros2_ws/build/storagy_drive/build install --record /home/storagy/ros2_ws/build/storagy_drive/install.log --single-version-externally-managed install_data --force
