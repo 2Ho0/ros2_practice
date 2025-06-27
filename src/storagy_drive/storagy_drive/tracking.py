@@ -6,56 +6,59 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import LaserScan
 import math
 import numpy as np
-from cv_bridge import CvBridge
-from sensor_msgs.msg import Image
 
 class DetectionProcessor(Node):
     def __init__(self):
         super().__init__('detection_processor')
-        
-        
-        self.bridge = CvBridge()
+
         # PID parameters
         self.Kp_x = 1.5
         self.Ki_x = 0.0
         self.Kd_x = 0.008
+
         self.Kp_speed = 0.003
         self.Ki_speed = 0.0
         self.Kd_speed = 0.0
+
+        self.Kp_speed_no = 0.0005
+        self.Ki_speed_no = 0.0
+        self.Kd_speed_no = 0.006
+
+
+        self.Kp_angular = 1.5
+        self.Ki_angular = 0.0
+        self.Kd_angular = 0.0
+        
         self.dt = 1 / 30.0
 
         # State variables
         self.ws = 0.0
         self.wy = 0.0
+        self.speed = 0.0
+        self.angular = 0.0
         self.speed_min = 0.0
+        self.prev_angular = 0.0
+        self.prev_angular_gap = 0.0
+        self.prev_speed = 0.0
+        self.prev_speed_gap = 0.0
+        
         self.integral = 0.0
         self.prev_error_x = 0.0
         self.prev_error_distance = 0.0
 
         self.twist = Twist()
         self.latest_distance = None
+        self.prev_latest_distance = 0.0
         self.avoid_angular = 0.0
         self.buffer = []
         self.start_time = time.time()
 
         # LIDAR parameters
         self.downsample_gap = 10
-        self.max_sight = 1.0
-        self.max_gap_safe_dist = 0.5
+        self.max_sight = 4.0
+        self.max_gap_safe_dist = 0.45
 
-        # Person detection tracking
-        self.last_seen_time = None
-        self.missing_threshold = 0.3  # seconds
-
-
-        self.sub = self.create_subscription(
-            Image,
-            '/camera/depth/image_raw',
-            self.depth_callback,
-            10
-        )
-
-        # ROS2 interfaces
+        # ROS2 Subscribers & Publishers
         self.sub_yolo = self.create_subscription(
             String,
             '/yolo_output/detections',
@@ -73,36 +76,6 @@ class DetectionProcessor(Node):
             '/cmd_vel',
             10
         )
-        
-
-    def depth_callback(self, msg):
-        try:
-            depth_img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
-
-            if depth_img.dtype != np.uint16:
-                self.get_logger().warn("Depth image is not uint16.")
-                return
-
-            h, w = depth_img.shape
-            cy = h // 2
-            y1 = max(cy - 10, 0)
-            y2 = min(cy + 10, h)
-
-            roi = depth_img[y1:y2, :]  # 전체 가로 시야 사용
-            valid = roi[(roi >= 200) & (roi <= 3000)]  # 0.2m ~ 3m
-
-            if valid.size > 0:
-                valid_m = valid.astype(np.float32) / 1000.0
-                close_ratio = np.sum(valid_m <= 0.3) / valid_m.size
-
-                if close_ratio >= 0.1:
-                    self.twist.linear.x = 0.0
-                    self.twist.angular.z = 0.0
-                    self.pub.publish(self.twist)
-                    self.get_logger().warn("긴급 정지: 전체 시야에 0.3m 이하 장애물 10% 이상")
-        except Exception as e:
-            self.get_logger().error(f"Depth 처리 중 오류: {e}")
-
 
     def PID_controller(self, error, prev_error, Kp, Ki, Kd, dt=1 / 30.0):
         P = Kp * error
@@ -140,17 +113,23 @@ class DetectionProcessor(Node):
         return (start_i + end_i) / 2.0
 
     def laserscan_callback(self, msg: LaserScan):
-        # ±60도 범위 설정
-        angle_range = math.radians(60)
+        # +-10도 범위 설정
+        angle_range_human = math.radians(20)
+        angle_range_ob = math.radians(70)
         center_index = int((0.0 - msg.angle_min) / msg.angle_increment)
-        half_range = int(angle_range / msg.angle_increment)
-        start_idx = max(0, center_index - half_range)
-        end_idx = min(len(msg.ranges), center_index + half_range)
+        half_range_human = int(angle_range_human / msg.angle_increment)
+        half_range_ob = int(angle_range_ob / msg.angle_increment)
+        start_idx_human = max(0, center_index - half_range_human)
+        start_idx_ob = max(0, center_index - half_range_ob)
+        end_idx_human = min(len(msg.ranges), center_index + half_range_human)
+        end_idx_ob = min(len(msg.ranges), center_index + half_range_ob)
 
-        sub_ranges = msg.ranges[start_idx:end_idx]
-        start_angle = msg.angle_min + start_idx * msg.angle_increment
+        sub_ranges_human = msg.ranges[start_idx_human:end_idx_human]
+        sub_ranges_ob = msg.ranges[start_idx_ob:end_idx_ob]
+        
+        start_angle = msg.angle_min + start_idx_ob * msg.angle_increment
 
-        proc_ranges = self.preprocess_lidar(sub_ranges)
+        proc_ranges = self.preprocess_lidar(sub_ranges_ob)
         start_max_gap, end_max_gap = self.find_max_gap(proc_ranges)
         best_i = self.find_best_point(start_max_gap, end_max_gap, proc_ranges)
 
@@ -158,8 +137,9 @@ class DetectionProcessor(Node):
         best_angle = start_angle + best_i * angle_per_index
         self.avoid_angular = best_angle
 
-        valid_distances = [r for r in sub_ranges if not math.isinf(r) and not math.isnan(r)]
+        valid_distances = [r for r in sub_ranges_human if not math.isinf(r) and not math.isnan(r)]
         self.latest_distance = sum(valid_distances) / len(valid_distances) if valid_distances else None
+        self.prev_latest_distance = self.latest_distance
 
     def listener_callback(self, msg: String):
         detections = msg.data.strip().split(';')
@@ -186,11 +166,8 @@ class DetectionProcessor(Node):
 
         if current_time - self.start_time > 0.1:
             self.start_time = current_time
-            person_detected = bool(self.buffer)
 
-            if person_detected:
-                self.last_seen_time = current_time  # 시간 갱신
-
+            if self.buffer:
                 avg_x = sum(x for x, _, _, _ in self.buffer) / len(self.buffer)
                 avg_y = sum(y for _, y, _, _ in self.buffer) / len(self.buffer)
                 avg_ws = sum(ws for _, _, ws, _ in self.buffer) / len(self.buffer)
@@ -199,49 +176,49 @@ class DetectionProcessor(Node):
                 self.get_logger().info(f"[YOLO] 평균 좌표: x={avg_x:.3f}, y={avg_y:.3f}, width={avg_ws:.3f}")
                 error_x = avg_x - 0.5
 
-                if self.latest_distance is not None and self.latest_distance > 0.5:
+                if self.prev_latest_distance is not None and self.prev_latest_distance > 0.5:
                     self.speed_min = 0.3
-                    self.twist.linear.x = self.speed_min if avg_ws == 0.0 else self.speed_min / avg_ws
+                    self.speed = self.speed_min if avg_ws == 0.0 else self.speed_min / avg_ws
+                    self.prev_speed = self.speed
+                    self.twist.linear.x = self.prev_speed
+
 
                     if abs(error_x) > 0.05:
-                        angular = self.PID_controller(error_x, self.prev_error_x, self.Kp_x, self.Ki_x, self.Kd_x)
+                        self.angular = self.PID_controller(error_x, self.prev_error_x, self.Kp_x, self.Ki_x, self.Kd_x)
                         self.prev_error_x = error_x
-                        self.twist.angular.z = -angular
+                        self.prev_angular = -self.angular
+                        self.twist.angular.z = -self.angular
                     else:
                         self.twist.angular.z = 0.0
 
                     self.get_logger().info("사람 따라갈게요.")
                 else:
-                    if self.latest_distance is not None:
-                        error_distance = self.latest_distance - 0.5
+                    if self.prev_latest_distance is not None:
+                        error_distance = self.prev_latest_distance - 0.5
                         speed = self.PID_controller(error_distance, self.prev_error_distance, self.Kp_speed, self.Ki_speed, self.Kd_speed)
-                        print("speed: ", speed)
                         self.prev_error_distance = error_distance
-                        # self.twist.linear.x = speed
-                        self.twist.linear.x = 0.0
+                        self.speed = speed
+                        self.prev_speed = self.speed
+                        self.twist.linear.x = self.prev_speed
                         self.twist.angular.z = 0.0
-                        self.get_logger().info("사람이랑 너무 가까워요.")
+                        self.get_logger().info("너무 가까워요.")
                     else:
                         self.get_logger().info("거리 데이터 없어요. 동작 초기 상태입니다.")
-
             else:
-                # 사람이 안 보일 때 → 1초 유예
-                if self.last_seen_time is None or (current_time - self.last_seen_time) > self.missing_threshold:
-                    if self.latest_distance is not None and self.latest_distance > 0.5:
-                        error_distance = self.latest_distance - 0.5
-                        speed = self.PID_controller(error_distance, self.prev_error_distance, self.Kp_speed, self.Ki_speed, self.Kd_speed)
-                        self.prev_error_distance = error_distance
-                        # self.twist.linear.x = speed
-                        self.twist.linear.x = 0.0
-                    else:
-                        # self.twist.linear.x = self.speed_min
-                        self.twist.linear.x = 0.0
-
-                    self.twist.angular.z = self.avoid_angular
-                    self.get_logger().info("사람 없어요. 자율 회피할게요.")
+                if self.prev_latest_distance is not None:
+                    speed_gap = self.prev_speed - self.speed_min
+                    speed = self.PID_controller(speed_gap, self.prev_speed_gap, self.Kp_speed_no, self.Ki_speed_no, self.Kd_speed_no)
+                    self.prev_speed_gap = speed_gap
+                    self.twist.linear.x = speed
                 else:
-                    self.get_logger().info("사람 놓쳤지만 아직 기다리는 중입니다.")
-                    # 방향 및 속도 유지
+                    self.twist.linear.x = self.prev_speed
+
+                angular_gap = self.angular - self.prev_angular
+                angular = self.PID_controller(angular_gap, self.prev_angular_gap, self.Kp_angular, self.Ki_angular, self.Kd_angular)
+                self.prev_angular_gap = angular_gap
+
+                self.twist.angular.z = angular
+                self.get_logger().info("사람 없어요. 자율 회피할게요")
 
             self.cmd_vel_pub.publish(self.twist)
 
