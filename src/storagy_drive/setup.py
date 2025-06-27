@@ -25,7 +25,7 @@ setup(
             'image_example = storagy_drive.image_example:main',
             'cmd_test = storagy_drive.cmd_test:main',
             'img_test = storagy_drive.img_test:main',
-            'storagy_drive = storagy_drive.storagy_drive:main',
+            'color = storagy_drive.color:main',
 
 
         ],

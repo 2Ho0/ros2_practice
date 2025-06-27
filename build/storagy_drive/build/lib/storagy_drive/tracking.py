@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 import time
+from geometry_msgs.msg import Twist
 
 class DetectionProcessor(Node):
     def __init__(self):
@@ -11,36 +12,68 @@ class DetectionProcessor(Node):
             '/yolo_output/detections',
             self.listener_callback,
             10)
-       
+
+        self.cmd_vel_pub = self.create_publisher(Twist, 'cmd_vel',10)
         self.buffer = []  # (x, y) tuples
         self.start_time = time.time()
 
     def listener_callback(self, msg):
-        detections = msg.data.strip('[]').replace("'", "").split(', ')
+        detections = msg.data.strip().split(';')
         current_time = time.time()
 
         for item in detections:
-            if ':' in item:
-                class_id_str, coords_str = item.split(':')
-                if class_id_str == '14':  # 필터: class id 14
-                    try:
-                        x_str, y_str = coords_str.split(',')
-                        x = float(x_str)
-                        y = float(y_str)
-                        self.buffer.append((x, y))
-                    except ValueError:
-                        continue  # malformed data, skip
+            parts = item.strip().split(':')
+            if len(parts)!=2:
+                continue
+            class_id_str = parts[0].strip()
+            coords_str = parts[1].strip()
+            
+            if class_id_str == '14':  # 필터: class id 14
+                try:
+                    coords = coords_str.split(',')
+                    if len(coords) != 2:
+                        continue
+                    x = float(coords[0].strip())
+                    y = float(coords[1].strip())
+                    self.buffer.append((x, y))
+                except ValueError:
+                    continue  # malformed data, skip
 
         # 1초 동안 평균 계산
         if current_time - self.start_time > 1.0:
+            self.start_time = current_time
             if self.buffer:
                 avg_x = sum(x for x, _ in self.buffer) / len(self.buffer)
                 avg_y = sum(y for _, y in self.buffer) / len(self.buffer)
                 self.get_logger().info(f"Class 14 평균 좌표: x={avg_x:.3f}, y={avg_y:.3f}")
+                self.buffer.clear()
+
+
+                error_x = avg_x - 0.5
+                k_p = 2
+                twist = Twist()
+
+                if  abs(error_x) > 0.05:
+                    twist.linear.x = 0.0
+                    twist.angular.z = -error_x*k_p
+                    self.get_logger().info("회전 정렬 중")
+                elif avg_y < 0.85:
+                    twist.linear.x = 0.2
+                    twist.angular.z = 0.0
+                    self.get_logger().info("전진 중")
+                else:
+                    twist.linear.x = 0.0
+                    twist.angular.z = 0.0
+                    self.get_logger().info("도착: 정지")
+                    
+                self.cmd_vel_pub.publish(twist)
+
+
+            
             else:
                 self.get_logger().info("Class 14 객체 없음")
-            self.buffer.clear()
-            self.start_time = current_time
+            
+
 
 
 def main(args=None):

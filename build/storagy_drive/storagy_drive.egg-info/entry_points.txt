@@ -1,8 +1,8 @@
 [console_scripts]
 cmd_test = storagy_drive.cmd_test:main
 cmd_vel_example = storagy_drive.cmd_vel_example:main
+color = storagy_drive.color:main
 image_example = storagy_drive.image_example:main
 img_test = storagy_drive.img_test:main
 scan_example = storagy_drive.scan_example:main
-storagy_drive = storagy_drive.storagy_drive:main
 

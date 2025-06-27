@@ -12,11 +12,10 @@ resource/storagy_drive
 storagy_drive/__init__.py
 storagy_drive/cmd_test.py
 storagy_drive/cmd_vel_example.py
+storagy_drive/color.py
 storagy_drive/drive_1.py
 storagy_drive/image_example.py
-storagy_drive/img_test.py
 storagy_drive/scan_example.py
-storagy_drive/storagy_drive.py
 storagy_drive/tracking.py
 test/test_copyright.py
 test/test_flake8.py

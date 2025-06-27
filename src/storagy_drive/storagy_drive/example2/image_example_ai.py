@@ -7,7 +7,7 @@ import cv2
 import torch
 from torchvision import transforms as T
 
-from models.tiny_yolov1net_squeezenet import Tiny_YoloV1_SqueezeNet
+from models.tiny_yolov1net_mobilenetv3_small import Tiny_YoloV1_MobileNetV3_Small
 from utils.yolov1_utils import non_max_suppression, cellboxes_to_boxes
 from utils.custom_transform import draw_bounding_box
 
@@ -16,8 +16,8 @@ device = torch.device("cpu")
 transform = T.Compose([T.ToTensor()])
 torch.set_num_threads(6)
 
-model = Tiny_YoloV1_SqueezeNet(S=7, B=2, C=20).to(device)
-checkpoint = torch.load("example2/cpts/squeezenet_tiny_adj_lr_yolov1.cpt", map_location=device)
+model = Tiny_YoloV1_MobileNetV3_Small(S=7, B=2, C=20).to(device)
+checkpoint = torch.load("cpts/mobilenetv3_small_tiny_adj_lr_yolov1.cpt", map_location=device)
 model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
@@ -65,7 +65,9 @@ class YoloNode(Node):
                 class_id = int(box[0])
                 cx = round(box[2], 2)
                 cy = round(box[3], 2)
-                info_list.append(f"{class_id}:{cx},{cy}")
+                wx = round(box[4], 2)
+                wy = round(box[5], 2)
+                info_list.append(f"{class_id}:{cx},{cy},{wx},{wy}")
             detection_str = "; ".join(info_list)
             self.pub_txt.publish(String(data=detection_str))
             self.get_logger().info(f"Detected {len(bboxes)} object(s): {detection_str}")
